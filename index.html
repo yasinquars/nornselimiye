@@ -1,1 +1,349 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norn Selimiye | Butik Otel</title>
+    <!-- Tailwind CSS ve Google Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FDFBF7; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        /* Kaydırma çubuğunu gizle ama işlevini koru */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="text-stone-800 relative">
 
+    <!-- 1. HEADER (NAVBAR) -->
+    <header class="absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-black/50 to-transparent">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-white font-serif text-2xl tracking-widest font-semibold">NORN SELİMİYE</a>
+            <nav class="hidden md:flex space-x-8 text-white/90 text-sm tracking-wide">
+                <button onclick="scrollToSection('hakkimizda')" class="text-white hover:text-white/80 transition cursor-pointer bg-transparent border-none">Hakkımızda</button>
+                <button onclick="scrollToSection('odalar')" class="text-white hover:text-white/80 transition cursor-pointer bg-transparent border-none">Odalarımız</button>
+                <button onclick="scrollToSection('iletisim')" class="text-white hover:text-white/80 transition cursor-pointer bg-transparent border-none">İletişim</button>
+            </nav>
+        </a><a href="https://wa.me/905395674865?text=Merhaba,%20Norn%20Selimiye%20i%C3%A7in%20rezervasyon%20bilgisi%20alabilir%20miyim?" target="_blank" class="bg-[#C2B29F] hover:bg-[#b3a390] text-white px-5 py-2.5 text-sm font-medium transition duration-300 rounded-sm">Rezervasyon Yap</a>
+        </div>
+    </header>
+
+    <!-- 2. HERO BÖLÜMÜ -->
+    <section class="relative h-screen flex items-center justify-center bg-stone-900 overflow-hidden">
+        <img src="images/anasayfa1.jpg" alt="Norn Selimiye" class="absolute inset-0 w-full h-full object-cover opacity-60">
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">Selimiye’nin kalbinde,<br><span class="italic font-light">zamansız bir huzur.</span></h1>
+            <p class="text-white/80 text-lg md:text-xl font-light mb-8 max-w-2xl mx-auto">Kalabalıktan uzak, doğanın ve denizin sesini dinlemek isteyenler için tasarlanmış rafine bir kaçış noktası.</p>
+            <a href="https://www.instagram.com/nornhotelselimiye" target="_blank" class="border border-white text-white hover:bg-white hover:text-stone-900 px-8 py-3.5 text-sm tracking-wider transition duration-300">KEŞFEDİN</a>
+        </div>
+    </section>
+
+    <!-- 3. HAKKIMIZDA BÖLÜMÜ -->
+    <section id="hakkimizda" class="py-24 px-6 max-w-7xl mx-auto block">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6">
+                <span class="text-[#5E6953] text-sm tracking-widest font-medium uppercase block">Norn da Yaşam</span>
+                <h2 class="text-3xl md:text-4xl font-serif text-stone-900 leading-snug">Ege'nin Dingin Ritmini ve Doğallığını Hissedin</h2>
+                <p class="text-stone-600 leading-relaxed font-light">Norn Selimiye; yeşillik alanıyla , zeytin ağacıyla çevrili bahçesi ve Selimiye'nin o meşhur denizine olan yakınlığıyla size sadece bir konaklama değil, ruhunuzu dinlendireceğiniz bir deneyim sunuyor.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="images/iskele.jpg" alt="Otel Detay" class="w-full h-80 object-cover rounded-sm shadow-sm">
+                <img src="images/bahçe.jpg" alt="Selimiye" class="w-full h-80 object-cover rounded-sm shadow-sm mt-8">
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ODALARIMIZ BÖLÜMÜ -->
+    <section id="odalar" class="py-20 bg-[#5E6953]/5 px-6 block">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif text-stone-900 mb-4">Yaşam Alanlarımız</h2>
+                <p class="text-stone-600 font-light text-sm">Doğal dokularla ve konforunuz düşünülerek özenle dekore edilmiş 4 özel oda seçeneği.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Oda 1 -->
+                <div class="bg-white rounded-sm overflow-hidden shadow-sm group flex flex-col justify-between border border-stone-100">
+                    <div>
+                        <div class="overflow-hidden h-72">
+                            <img src="images/zümrütoda/zümrütodabaşlık.jpg" alt="Deluxe Oda" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-8 pb-2">
+                            <h3 class="font-serif text-2xl mb-2">Zümrüt Oda</h3>
+                            <p class="text-stone-500 text-sm font-light mb-4">Doğanın huzur veren dokusunu modern konforla buluşturan Zümrüt Oda,pencerelerini Marmaris Selimiye'nin eşsiz deniz manzarasına açıyor. Hem gözlerden uzak hem de denizle iç içe bir konaklama deneyimi arayanlar için mükemmel bir kaçış noktası.</p>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0">
+                        <button onclick="openModal('deluxe')" class="w-full text-center text-xs font-medium tracking-wider text-[#5E6953] border border-[#5E6953] py-3 rounded-sm hover:bg-[#5E6953] hover:text-white transition duration-300 mb-4 cursor-pointer">Oda Detayları</button>
+                        <div class="flex justify-between items-center pt-4 border-t border-stone-100 text-xs text-stone-400 tracking-wider">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oda 2 -->
+                <div class="bg-white rounded-sm overflow-hidden shadow-sm group flex flex-col justify-between border border-stone-100">
+                    <div>
+                        <div class="overflow-hidden h-72">
+                            <img src="images/safiroda/safirodabaşlık1.jpg" alt="Süit Oda" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-8 pb-2">
+                            <h3 class="font-serif text-2xl mb-2">Safir Oda</h3>
+                            <p class="text-stone-500 text-sm font-light mb-4">Safir Oda'da güne Selimiye'nin masmavi deniz manzarasıyla başlayın. Odadaki her detayın konforunuz için düşünüldüğü bu özel alanda,deniz manzaralı balkonunuzda kahvenizi yudumlarken dış dünyanın tüm yorgunluğunu geride bırakacaksınız. Norn Hotel'in sıcak atmosferinde,maviye ve huzura doymak isteyenler için en doğru tercih.</p>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0">
+                        <button onclick="openModal('suite')" class="w-full text-center text-xs font-medium tracking-wider text-[#5E6953] border border-[#5E6953] py-3 rounded-sm hover:bg-[#5E6953] hover:text-white transition duration-300 mb-4 cursor-pointer">Oda Detayları</button>
+                        <div class="flex justify-between items-center pt-4 border-t border-stone-100 text-xs text-stone-400 tracking-wider">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oda 3 -->
+                <div class="bg-white rounded-sm overflow-hidden shadow-sm group flex flex-col justify-between border border-stone-100">
+                    <div>
+                        <div class="overflow-hidden h-72">
+                            <img src="images/mercanoda/mercanoda1.jpg" alt="Standart Oda" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-8 pb-2">
+                            <h3 class="font-serif text-2xl mb-2">Mercan Oda</h3>
+                            <p class="text-stone-500 text-sm font-light mb-4">Adını denizlerin en sıcak ve canlı renginden alan Mercan Oda , Selimiye'nin huzurlu ruhunu hissetmek isteyen misafirlerimizi bekliyor. Doğal ahşap ve şık hezeran detayların modern bir estetikle buluştuğu bu odamız, fonksiyonel yapısı ve atmosferiyle konforlu bir konaklama sunuyor..</p>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0">
+                        <button onclick="openModal('comfort')" class="w-full text-center text-xs font-medium tracking-wider text-[#5E6953] border border-[#5E6953] py-3 rounded-sm hover:bg-[#5E6953] hover:text-white transition duration-300 mb-4 cursor-pointer">Oda Detayları</button>
+                        <div class="flex justify-between items-center pt-4 border-t border-stone-100 text-xs text-stone-400 tracking-wider">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oda 4 -->
+                <div class="bg-white rounded-sm overflow-hidden shadow-sm group flex flex-col justify-between border border-stone-100">
+                    <div>
+                        <div class="overflow-hidden h-72">
+                            <img src="images/kehribaroda/kehribaroda1.jpg" alt="Garden Süit Oda" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-8 pb-2">
+                            <h3 class="font-serif text-2xl mb-2">Kehribar Oda</h3>
+                            <p class="text-stone-500 text-sm font-light mb-4">Kehribar Oda, şık hezeran mobilyaları ve doğrudan otelin keyifli bahçesine açılan konumuyla Selimiye'deki huzurlu sığınağınız. Konforlu yaşam alanı ve fonksiyonel yatak düzeniyle öne çıkan odamız, doğayla iç içe , sakin ve samimi bir tatil deneyimi arayan misafirlerimiz için tasarlandı.</p>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0">
+                        <button onclick="openModal('garden')" class="w-full text-center text-xs font-medium tracking-wider text-[#5E6953] border border-[#5E6953] py-3 rounded-sm hover:bg-[#5E6953] hover:text-white transition duration-300 mb-4 cursor-pointer">Oda Detaylarını Gör</button>
+                        <div class="flex justify-between items-center pt-4 border-t border-stone-100 text-xs text-stone-400 tracking-wider">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. NORN DENEYİMİ BÖLÜMÜ (TEK GÖRSEL VE ORTALI SÜRÜM) -->
+    <section id="deneyim" class="py-24 px-6 max-w-7xl mx-auto block">
+        <div class="flex flex-col items-center justify-center text-center max-w-3xl mx-auto space-y-6">
+            <div class="w-full overflow-hidden rounded-sm shadow-sm">
+                <img src="images/kahvaltı.jpg" alt="Kahvaltı" class="w-full h-[550px] object-cover">
+            </div>
+            <div class="pt-2">
+                <h3 class="font-serif text-3xl mb-3 text-stone-900">Organik Ege Kahvaltısı</h3>
+                <p class="text-stone-600 font-light text-base max-w-xl mx-auto">Kendi bahçemizden topladığımız tamamen organik ürünler, yerel zeytinler ve Ege'nin taze otlarıyla hazırlanan eşsiz bir sabah deneyimi.</p>
+            </div>
+        </div>
+    </section>            </div>
+        </div>
+    </section>
+
+    <!-- 6. İLETİŞİM & REZERVASYON -->
+    <section id="iletisim" class="py-24 px-6 max-w-7xl mx-auto block">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div class="space-y-8">
+                <h2 class="text-3xl font-serif text-stone-900">Sizi Ağırlamaktan<br>Mutluluk Duyacağız</h2>
+                <div class="space-y-4 text-sm text-stone-700">
+                    <p><span class="font-medium w-24 inline-block">Adres:</span> Selimiye, Buruncuk Sokak No:135,48700 Marmaris / Muğla</p>
+                    <p><span class="font-medium w-24 inline-block">Telefon:</span> +90 (539) 567 48 65</p>
+                    <p><span class="font-medium w-24 inline-block">E-posta:</span> nornselimiyeinfo@gmail.com</p>
+                </div>
+            </div>
+            <div class="bg-white p-8 border border-stone-200/60 rounded-sm shadow-sm">
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-xs font-medium tracking-wider text-stone-500 uppercase mb-2">Adınız Soyadınız</label>
+                        <input type="text" class="w-full border-b border-stone-300 focus:border-[#5E6953] outline-none py-2 text-sm bg-transparent transition">
+                    </div>
+                    <a href="https://wa.me/905395674865?text=Merhaba,%20web%20sitenizden%20ula%C5%9F%C4%B1yorum." target="_blank" class="w-full block text-center bg-[#5E6953] hover:bg-[#4d5744] text-white text-sm font-medium py-3 tracking-wider transition duration-300 rounded-sm">WHATSAPP İLE GÖNDER</a>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTROLLERİ DÜZELTİLMİŞ POP-UP (MODAL) PENCERESİ -->
+    <div id="galleryModal" class="fixed inset-0 bg-black/95 z-[100] hidden items-center justify-center p-4 transition-all duration-300">
+        <button onclick="closeModal()" class="absolute top-4 right-4 md:top-6 md:right-6 text-white/70 hover:text-white text-4xl font-light z-[110] transition">&times;</button>
+        
+        <div class="w-full max-w-5xl h-[95vh] flex flex-col justify-between p-2 md:p-4 relative">
+            
+            <div class="text-center md:text-left pt-2 pb-2">
+                <h3 id="modalTitle" class="font-serif text-xl md:text-2xl text-white tracking-wide">Oda Detayları</h3>
+            </div>
+            
+            <!-- 📸 KONTROL BUTONLARI İÇİN ALT BOŞLUK BIRAKILAN MEDYA ALANI -->
+            <div class="flex-1 flex items-center justify-center overflow-hidden w-full relative bg-transparent my-auto p-2 pb-8">
+                <!-- pb-8 ve max-h-[65vh] kuralları video barının asla aşağıya kaçmamasını sağlar -->
+                <video id="modalVideo" class="max-w-full max-h-[62vh] md:max-h-[68vh] md:max-w-[450px] object-contain rounded-sm shadow-2xl" controls muted playsinline>
+                    <source src="" type="video/mp4">
+                </video>
+                <img id="modalMainImage" class="max-w-full max-h-[62vh] md:max-h-[68vh] md:max-w-[450px] object-contain hidden rounded-sm shadow-2xl" src="" alt="Büyük Oda Görseli">
+            </div>
+            
+            <div class="pt-4 pb-2 w-full">
+                <p class="text-[10px] tracking-widest text-white/40 uppercase mb-3 text-center md:text-left font-medium">Görüntülemek İstediğiniz Medyayı Seçin</p>
+                <div id="modalGrid" class="flex gap-3 overflow-x-auto pb-2 no-scrollbar justify-center md:justify-start">
+                    <!-- İçerik JS ile dolacak -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT KONTROLLERI -->
+    <script>
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                const offset = 80;
+                const bodyRect = document.body.getBoundingClientRect().top;
+                const elementRect = element.getBoundingClientRect().top;
+                const elementPosition = elementRect - bodyRect;
+                const offsetPosition = elementPosition - offset;
+                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+            }
+        }
+
+        const roomData = {
+            deluxe: {
+                title: "Zümrüt Oda",
+                video: "images/zümrütoda/zümrütoda4.mp4",
+                images: [
+                    "images/zümrütoda/zümrütoda1.jpg",
+                    "images/zümrütoda/zümrütoda2.jpg", "images/zümrütoda/zümrütoda3.jpg",                                                                        "images/zümrütoda/zümrütoda4.jpg"
+                ]
+            },
+            suite: {
+                title: "Safir Oda",
+                video: "images/safiroda/safiroda.mp4",
+                images: [
+                    "images/safiroda/safiroda1.jpg",
+                    "images/safiroda/safiroda2.jpg",
+                    "images/safiroda/safiroda3.jpg"
+                ]
+            },
+            comfort: {
+                title: "Mercan Oda",
+                video: "images/mercanoda/mercanoda.mp4",
+                images: [
+                    "images/mercanoda/mercanoda1.jpg",
+                    "images/mercanoda/mercanoda2.jpg",
+                    "images/mercanoda/mercanoda3.jpg"
+                ]
+            },
+            garden: {
+                title: "Kehribar Oda",
+                video: "images/kehribaroda/kehribaroda.mp4",
+                images: [
+                    "images/kehribaroda/kehribaroda1.jpg",
+                    "images/kehribaroda/kehribaroda2.jpg",
+                    "images/kehribaroda/kehribaroda3.jpg","images/kehribaroda/kehribaroda4.jpg"
+                ]
+            }
+        };
+
+        function showVideoSource(videoUrl) {
+            const video = document.getElementById('modalVideo');
+            const img = document.getElementById('modalMainImage');
+            img.classList.add('hidden');
+            video.classList.remove('hidden');
+            video.src = videoUrl;
+            video.play().catch(() => {});
+        }
+
+        function showImageSource(imgUrl) {
+            const video = document.getElementById('modalVideo');
+            const img = document.getElementById('modalMainImage');
+            video.pause();
+            video.classList.add('hidden');
+            img.classList.remove('hidden');
+            img.src = imgUrl;
+        }
+
+        function openModal(roomKey) {
+            const modal = document.getElementById('galleryModal');
+            const title = document.getElementById('modalTitle');
+            const grid = document.getElementById('modalGrid');
+            const data = roomData[roomKey];
+            
+            if (data) {
+                title.innerText = data.title;
+                grid.innerHTML = '';
+
+                showVideoSource(data.video);
+
+                const videoThumb = document.createElement('div');
+                videoThumb.className = "flex-shrink-0 w-20 h-16 bg-stone-900 border border-white/20 rounded-sm flex items-center justify-center cursor-pointer hover:border-white transition";
+                videoThumb.innerHTML = `<span class="text-white text-[10px] font-medium tracking-wider">🎥 VİDEO</span>`;
+                videoThumb.onclick = () => {
+                    document.querySelectorAll('#modalGrid > *').forEach(el => el.classList.remove('border-white', 'border-2'));
+                    videoThumb.classList.add('border-white', 'border-2');
+                    showVideoSource(data.video);
+                };
+                grid.appendChild(videoThumb);
+                videoThumb.classList.add('border-white', 'border-2');
+
+                data.images.forEach(imgUrl => {
+                    const imgThumb = document.createElement('img');
+                    imgThumb.src = imgUrl;
+                    imgThumb.className = "flex-shrink-0 w-20 h-16 object-cover rounded-sm border border-white/10 opacity-60 hover:opacity-100 cursor-pointer transition";
+                    imgThumb.onclick = () => {
+                        document.querySelectorAll('#modalGrid > *').forEach(el => {
+                            el.classList.remove('border-white', 'border-2');
+                            el.classList.add('opacity-60');
+                        });
+                        imgThumb.classList.add('border-white', 'border-2');
+                        imgThumb.classList.remove('opacity-60');
+                        showImageSource(imgUrl);
+                    };
+                    grid.appendChild(imgThumb);
+                });
+
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('galleryModal');
+            const video = document.getElementById('modalVideo');
+            video.pause();
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('galleryModal').addEventListener('click', function(e) {
+            if (e.target === this) { closeModal(); }
+        });
+    </script>
+</body>
+</html>
